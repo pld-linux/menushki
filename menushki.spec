@@ -39,7 +39,7 @@ cd ktools-1.1
 cd ..
 
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
