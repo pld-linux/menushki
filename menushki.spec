@@ -26,7 +26,7 @@ Menushki jest konwerterem i edytorem menu dla ró¿nych X Window
 Menad¿erów. Aktualnie pracuje z menu KDE, GNOME, IceWM, BlackBox,
 Enlightenment oraz WindowMaker.
 
-%prep 
+%prep
 %setup -q
 %patch0 -p1
 
@@ -56,7 +56,7 @@ gzip -9nf README TODO ChangeLog
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files 
+%files
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/menushki
