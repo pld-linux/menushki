@@ -6,6 +6,7 @@ Release:	1
 License:	GPL v2
 Group:		X11/Window Managers/Tools
 Source0:	http://dl.sourceforge.net/menushki/%{name}-%{version}.tar.gz
+# Source0-md5:	fceed87938e5adfad7bc67a5374d6d8b
 Patch0:		%{name}-ncurses.patch
 URL:		http://menushki.sourceforge.net/
 BuildRequires:	autoconf
