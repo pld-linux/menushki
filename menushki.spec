@@ -5,14 +5,13 @@ Version:	1.0
 Release:	1
 License:	GPL v2
 Group:		X11/Window Managers/Tools
-Source0:	http://prdownloads.sourceforge.net/menushki/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/menushki/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ncurses.patch
 URL:		http://menushki.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Menushki is a console menu converter and editor for various X window
@@ -31,8 +30,8 @@ Enlightenmenta oraz WindowMakera.
 %build
 cd ktools-1.1
 	rm -f missing
-	aclocal
-	autoconf
+	%{__aclocal}
+	%{__autoconf}
 	automake -a -c
 cd ..
 
