@@ -1,5 +1,5 @@
 Summary:	Menu converter and editor for various Window Managers
-Summary(pl):	Konwerter menu oraz edytor dla wielu Window Menad¿erów
+Summary(pl):	Konwerter menu oraz edytor dla wielu zarz±dców okien
 Name:		menushki
 Version:	1.0
 Release:	1
@@ -22,9 +22,9 @@ managers. Currently works with KDE, GNOME, IceWM, BlackBox,
 Enlightenment and WindowMaker menu.
 
 %description -l pl
-Menushki jest konwerterem i edytorem menu dla ró¿nych X Window
-Menad¿erów. Aktualnie pracuje z menu KDE, GNOME, IceWM, BlackBox,
-Enlightenment oraz WindowMaker.
+Menushki jest konwerterem i edytorem menu dla ró¿nych zarz±dców okien
+dla X. Aktualnie wspó³pracuje z menu KDE, GNOME, IceWMa, BlackBoksa,
+Enlightenmenta oraz WindowMakera.
 
 %prep
 %setup -q
@@ -51,12 +51,10 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README TODO ChangeLog
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README TODO ChangeLog
 %attr(755,root,root) %{_bindir}/menushki
