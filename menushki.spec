@@ -13,8 +13,6 @@ BuildRequires:	automake
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Menushki is a console menu converter and editor for various X window
