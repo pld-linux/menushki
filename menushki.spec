@@ -5,13 +5,6 @@ Version:	1.0
 Release:	1
 License:	GPL v2
 Group:		X11/Window Managers/Tools
-Group(cs):	X11/Okenní mana¾ery/Nástroje
-Group(de):	X11/Fenstermanager/Tools
-Group(es):	X11/Administradores de Ventanas/Herramientas
-Group(fr):	X11/Gestionnaires de fenêtres/Outils
-Group(pl):	X11/Zarz±dcy okien/Narzêdzia
-Group(pt):	X11/Gestores de Janelas/Ferramentas
-Group(ru):	X11/ïËÏÎÎÙÅ ÍÅÎÅÄÖÅÒÙ/éÎÓÔÒÕÍÅÎÔÙ
 Source0:	http://prdownloads.sourceforge.net/menushki/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ncurses.patch
 URL:		http://menushki.sourceforge.net/
