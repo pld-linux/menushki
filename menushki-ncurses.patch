@@ -1,0 +1,29 @@
+--- ./ktools-1.1/src/Makefile.am.org	Sat Sep  8 11:19:17 2001
++++ ./ktools-1.1/src/Makefile.am	Sat Feb  9 01:22:06 2002
+@@ -1,4 +1,4 @@
+-INCLUDES = -I$(top_srcdir)/./include
++INCLUDES = -I$(top_srcdir)/./include -I/usr/include/ncurses
+ noinst_LIBRARIES = libsrc.a
+ libsrc_a_SOURCES = konst.d.cc konst.fs.cc konst.list.cc konst.logic.cc konst.process.cc konst.socket.cc konst.string.cc konst.ui.edit.cc konst.ui.fm.cc konst.ui.func.cc konst.ui.horbar.cc konst.ui.input.cc konst.ui.menu.cc konst.ui.skel.cc konst.ui.text.cc konst.ui.tree.cc konst.ui.window.cc konst.ui.dlg.cc
+ EXTRA_DIST = konst.d.cc konst.fs.cc konst.list.cc konst.logic.cc konst.process.cc konst.socket.cc konst.string.cc konst.ui.edit.cc konst.ui.fm.cc konst.ui.func.cc konst.ui.horbar.cc konst.ui.input.cc konst.ui.menu.cc konst.ui.skel.cc konst.ui.text.cc konst.ui.tree.cc konst.ui.window.cc konst.ui.dlg.cc
+--- ./ktools-1.1/Makefile.am.org	Sat Sep  8 11:19:17 2001
++++ ./ktools-1.1/Makefile.am	Sat Feb  9 01:19:16 2002
+@@ -1,4 +1,4 @@
+-INCLUDES = -I$(top_srcdir)/./include
++INCLUDES = -I$(top_srcdir)/./include -I/usr/include/ncurses
+ noinst_LIBRARIES = libktools.a
+ libktools_a_SOURCES =
+ libktools_a_LIBADD = src/konst.d.o src/konst.fs.o src/konst.list.o src/konst.logic.o src/konst.process.o src/konst.socket.o src/konst.string.o src/konst.ui.edit.o src/konst.ui.fm.o src/konst.ui.func.o src/konst.ui.horbar.o src/konst.ui.input.o src/konst.ui.menu.o src/konst.ui.skel.o src/konst.ui.text.o src/konst.ui.tree.o src/konst.ui.window.o src/konst.ui.dlg.o
+--- ./src/Makefile.am.org	Thu Nov 15 17:43:35 2001
++++ ./src/Makefile.am	Sat Feb  9 01:28:50 2002
+@@ -1,8 +1,8 @@
+ CXXLINK = dcur=`pwd`; cd $(top_srcdir)/ktools-1.1; $(MAKE); cd $$dcur; $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ $(LOADLIBES) $(LDLIBS)
+-INCLUDES = -I$(top_srcdir)/ktools-1.1 -I$(top_srcdir)/ktools-1.1/./include
++INCLUDES = -I$(top_srcdir)/ktools-1.1 -I$(top_srcdir)/ktools-1.1/./include -I/usr/include/ncurses
+ bin_PROGRAMS = menushki
+ menushki_SOURCES = m_kde.cc m_wm.cc m_enl.cc menushki.cc functs.cc m_ice.cc m_gnome.cc m_bb.cc editor.cc
+-menushki_LDFLAGS = -lcurses -L$(top_srcdir)/ktools-1.1
++menushki_LDFLAGS = -lncurses -L$(top_srcdir)/ktools-1.1
+ menushki_LDADD = -lktools @LIBS@
+ EXTRA_DIST = m_kde.cc m_wm.cc m_enl.cc menushki.cc functs.cc m_ice.cc m_gnome.cc m_bb.cc editor.cc functs.h menushki.h m_bb.h m_kde.h m_wm.h glob.h m_ice.h m_gnome.h editor.h m_enl.h
+ AUTOMAKE_OPTIONS = foreign
