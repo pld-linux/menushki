@@ -14,10 +14,10 @@ Group(pt):	X11/Gestores de Janelas/Ferramentas
 Group(ru):	X11/Оконные менеджеры/Инструменты
 Source0:	http://prdownloads.sourceforge.net/menushki/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ncurses.patch
+URL:		http://menushki.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	ncurses-devel
-URL:		http://menushki.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -29,7 +29,7 @@ managers. Currently works with KDE, GNOME, IceWM, BlackBox,
 Enlightenment and WindowMaker menu.
 
 %description -l pl
-Menushki jest konwerterem i edytorem menu dla rС©nych X Window 
+Menushki jest konwerterem i edytorem menu dla rС©nych X Window
 Menad©erСw. Aktualnie pracuje z menu KDE, GNOME, IceWM, BlackBox,
 Enlightenment oraz WindowMaker.
 
@@ -55,9 +55,10 @@ automake -a -c
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README COPYING TODO ChangeLog
+gzip -9nf README TODO ChangeLog
 
 %clean
 rm -rf $RPM_BUILD_ROOT
