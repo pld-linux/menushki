@@ -1,5 +1,5 @@
 Summary:	Menu converter and editor for various Window Managers
-Summary(pl.UTF-8):   Konwerter menu oraz edytor dla wielu zarządców okien
+Summary(pl.UTF-8):	Konwerter menu oraz edytor dla wielu zarządców okien
 Name:		menushki
 Version:	1.0
 Release:	1
